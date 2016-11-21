@@ -7,26 +7,17 @@ import { Link }       from '../class/link';
 })
 export class NavLeftComponent {
     links: Link[];
-    active: string;
 
     constructor() {
         this.links = [{
-            code: "a",
-            name: "a",
-            path: "#"
+            code: "home",
+            name: "home",
+            path: "/home"
         },
         {
-            code: "b",
-            name: "b",
-            path: "#"
+            code: "account",
+            name: "account",
+            path: "/account"
         }];
-
-        if(this.links[0])
-            this.active = this.links[0].code;
-    }
-
-    goTo(link) {
-        console.log(link);
-        this.active = link.code;
     }
 }

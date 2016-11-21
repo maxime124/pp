@@ -1,10 +1,10 @@
 import { Component,OnInit } from '@angular/core';
 import { ActivatedRoute, Params }   from '@angular/router';
 @Component({
-    selector: 'nav-center',
-    templateUrl: 'app/nav/nav-center.component.html'
+    selector: '<account>',
+    templateUrl: 'app/account/account.component.html'
 })
-export class NavCenterComponent implements OnInit {
+export class AccountComponent implements OnInit {
     constructor(
         private route: ActivatedRoute
     ) {}

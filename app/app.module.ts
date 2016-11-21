@@ -4,6 +4,7 @@ import { AppComponent }         from './app.component';
 import { NavTopComponent }      from './nav/nav-top.component';
 import { NavLeftComponent }     from './nav/nav-left.component';
 import { NavCenterComponent }   from './nav/nav-center.component';
+import { AccountComponent }   from './account/account.component';
 import { AppRoutingModule }     from './router/app-routing.module';
 
 @NgModule({
@@ -13,7 +14,8 @@ import { AppRoutingModule }     from './router/app-routing.module';
                         AppComponent,
                         NavTopComponent,
                         NavLeftComponent,
-                        NavCenterComponent
+                        NavCenterComponent,
+                        AccountComponent
                     ],
     bootstrap:      [ AppComponent ]
 })
