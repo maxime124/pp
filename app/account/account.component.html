@@ -1,6 +1,9 @@
-<h1 class="page-header">Account</h1>
-<div class="table-responsive">
-	<table class="table table-striped">
+<h1 class="page-header row">
+	<div class="col-lg-10">Accounts</div>
+	<div class="col-lg-2"><button type="button" class="btn btn-primary" (click)="">Add</button></div>
+</h1>
+<div class="table-responsive" class="row">
+	<table class="table table-striped col-lg-12">
 		<thead>
 			<tr>
 				<th>#</th>
@@ -11,19 +14,12 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>1</td>
-				<td>Lorem</td>
-				<td>ipsum</td>
-				<td>dolor</td>
-				<td>sit</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>amet</td>
-				<td>consectetur</td>
-				<td>adipiscing</td>
-				<td>elit</td>
+			<tr *ngFor="let account of accounts">
+				<td>{{account.code}}</td>
+				<td>{{account.name}}</td>
+				<td></td>
+				<td>{{account.value}}</td>
+				<td>{{account.percentage}}</td>
 			</tr>
 		</tbody>
 	</table>

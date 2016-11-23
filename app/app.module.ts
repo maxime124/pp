@@ -6,6 +6,7 @@ import { NavLeftComponent }     from './nav/nav-left.component';
 import { NavCenterComponent }   from './nav/nav-center.component';
 import { AccountComponent }   from './account/account.component';
 import { AppRoutingModule }     from './router/app-routing.module';
+import { AccountService }         from './account/account.service';
 
 @NgModule({
     imports:        [ BrowserModule,
@@ -17,6 +18,9 @@ import { AppRoutingModule }     from './router/app-routing.module';
                         NavCenterComponent,
                         AccountComponent
                     ],
-    bootstrap:      [ AppComponent ]
+    bootstrap:      [ AppComponent ],
+    providers:      [
+                        AccountService
+                    ],
 })
 export class AppModule { }
