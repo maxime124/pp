@@ -4,8 +4,9 @@ import { AccountService } from './account.service';
 import {Account} from "../class/account";
 
 @Component({
+    moduleId:       module.id,
     selector:       '<account>',
-    templateUrl:    'app/account/account.component.html',
+    templateUrl:    './account.component.html',
     providers:      [AccountService]
 })
 export class AccountComponent implements OnInit {
@@ -22,5 +23,11 @@ export class AccountComponent implements OnInit {
         this.accountService.getAccounts().then(
             accounts => this.accounts = accounts
         );
+    }
+
+    addTest(): void{
+        let newAccount = new Account('1','test','100');
+        console.log(newAccount);
+        this.accounts.push(newAccount);
     }
 }

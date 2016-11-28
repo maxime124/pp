@@ -1,6 +1,8 @@
 export class Account {
-    code: string;
-    name: string;
-    value: string;
-    percentage: string;
+    constructor(
+      public code: string,
+      public name: string,
+      public value: string,
+      public percentage? : string
+    ){}
 }
