@@ -5,12 +5,8 @@ import { Account }      from '../class/account';
 export class AccountService {
     getAccounts(): Promise<Account[]> {
         return Promise.resolve(
-                [{
-                    code: '1',
-                    name: 'cc',
-                    value: '200',
-                    percentage: '40'
-                },
+                [new Account('1','cc','200','40')
+                ,
                 {
                     code: '2',
                     name: 'pe',

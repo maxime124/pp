@@ -30,4 +30,10 @@ export class AccountComponent implements OnInit {
         console.log(newAccount);
         this.accounts.push(newAccount);
     }
+
+    updateListeAccount(newAccount:Account) {
+        console.log(newAccount);
+        this.accounts.push(Object.assign({}, newAccount));
+        console.log(this.accounts);
+    }
 }
