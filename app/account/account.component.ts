@@ -11,12 +11,13 @@ import {Account} from "../class/account";
 })
 export class AccountComponent implements OnInit {
     accounts: Account[];
+    private hiddenForm: boolean;
 
     constructor(
         private route:          ActivatedRoute,
         private accountService: AccountService
     ) {
-
+        this.hiddenForm = true;
     }
 
     ngOnInit(): void {
@@ -25,15 +26,11 @@ export class AccountComponent implements OnInit {
         );
     }
 
-    addTest(): void{
-        let newAccount = new Account('1','test','100');
-        console.log(newAccount);
-        this.accounts.push(newAccount);
+    updateListeAccount() {
+        this.hiddenForm = true;
     }
 
-    updateListeAccount(newAccount:Account) {
-        console.log(newAccount);
-        this.accounts.push(Object.assign({}, newAccount));
-        console.log(this.accounts);
+    displayForm() {
+        this.hiddenForm = false;
     }
 }

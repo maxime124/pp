@@ -9,10 +9,12 @@ import { AccountComponent }   from './account/account.component';
 import { AppRoutingModule }     from './router/app-routing.module';
 import { AccountService }         from './account/account.service';
 import { AccountFormComponent } from './account/account-form.component';
+import { HttpModule }    from '@angular/http';
 
 @NgModule({
     imports:        [ BrowserModule,
                     AppRoutingModule,
+                    HttpModule,
                     FormsModule],
     declarations:   [
                         AppComponent,
