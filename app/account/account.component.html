@@ -10,20 +10,24 @@
 		<table class="table table-striped">
 			<thead>
 			<tr>
-				<th>#</th>
 				<th>Nom</th>
 				<th>Type</th>
 				<th>Valeur</th>
 				<th>%</th>
+				<th></th>
 			</tr>
 			</thead>
 			<tbody>
 			<tr *ngFor="let account of accounts">
-				<td></td>
 				<td>{{account.name}}</td>
 				<td></td>
 				<td>{{account.value.value}}</td>
 				<td>{{account.percentage}}</td>
+				<td>
+					<button type="button" class="btn btn-default" aria-label="Left Align" (click)="delete(account._id)">
+						<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+					</button>
+				</td>
 			</tr>
 			</tbody>
 		</table>

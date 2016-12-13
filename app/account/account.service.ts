@@ -40,6 +40,16 @@ export class AccountService {
             .catch(this.handleError);
     }
 
+    deleteAccount(id: string) {
+        return this.http.delete(this.accountsUrl + '/' + id)
+            .toPromise()
+            .then(response => this.http.get(this.accountsUrl)
+                .toPromise()
+                .then(response => response.json() as boolean)
+                .catch(this.handleError))
+            .catch(this.handleError);
+    }
+
     reCalculPercentage(): void {
         var liSomme = 0;
         for(let account of accounts) {

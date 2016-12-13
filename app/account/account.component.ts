@@ -27,10 +27,19 @@ export class AccountComponent implements OnInit {
     }
 
     updateListeAccount() {
+        this.accountService.getAccounts().then(
+            accounts => this.accounts = accounts
+        );
         this.hiddenForm = true;
     }
 
     displayForm() {
         this.hiddenForm = false;
+    }
+
+    delete(id:string) {
+        this.accountService.deleteAccount(id).then(
+          this.updateListeAccount()
+        );
     }
 }

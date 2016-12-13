@@ -16,6 +16,7 @@ export class AccountValue {
 }
 
 export class Account {
+    public _id: string;
     public name: string;
     public description: string;
     public value: AccountValue;
