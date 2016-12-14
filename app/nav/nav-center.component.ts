@@ -10,8 +10,5 @@ export class NavCenterComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
-        this.route.params.forEach( (params:Params) => {
-            console.log(params);
-        });
     }
 }

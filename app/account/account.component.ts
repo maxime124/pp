@@ -39,7 +39,7 @@ export class AccountComponent implements OnInit {
 
     delete(id:string) {
         this.accountService.deleteAccount(id).then(
-          this.updateListeAccount()
+          deleted => this.updateListeAccount()
         );
     }
 }
