@@ -2,6 +2,8 @@ import { Component,OnInit } from '@angular/core';
 import { ActivatedRoute, Params }   from '@angular/router';
 import { AccountService } from './account.service';
 import {Account} from "../class/account";
+import {echarts} from "echarts";
+
 
 @Component({
     moduleId:       module.id,
@@ -24,6 +26,8 @@ export class AccountComponent implements OnInit {
         this.accountService.getAccounts().then(
             accounts => this.accounts = accounts
         );
+        //var myChart = echarts.init(document.getElementById('main'));
+        console.log(echarts);
     }
 
     updateListeAccount() {
