@@ -34,6 +34,7 @@ export class AccountService {
         //accounts.push(account);
         //this.reCalculPercentage();
        // return Promise.resolve(account);
+        console.log(account);
         return this.http.post(this.accountsUrl,account)
             .toPromise()
             .then(response => response.json() as Account)
